@@ -1,0 +1,6 @@
+{
+  "name": "Proposal Digital Program GROW & AI Diagnostic",
+  "description": "Kertas kerja digital rasmi dan sistem simulasi Business Performance Diagnostic janaan AI untuk Program GROW.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

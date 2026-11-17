@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kertas Kerja Digital - Program GROW & AI Business Diagnostic</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @media print {
+            .print-hidden { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+<!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-gradient-to-r from-sky-600 to-blue-700 text-white font-extrabold px-3.5 py-2 rounded-xl shadow-sm text-sm tracking-wide">
+                    GROW
+                </div>
+                <div>
+                    <span class="block font-bold text-slate-900 text-sm sm:text-base">Program GROW</span>
+                    <span class="block text-xs text-slate-500 font-medium">Proposal Rasmi & AI Diagnostic</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3 print-hidden">
+                <button onclick="window.print()" class="hidden sm:inline-flex items-center px-4 py-2.5 border border-slate-200 shadow-xs text-xs font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 transition">
+                    <svg class="w-4 h-4 mr-1.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Cetak / Simpan PDF
+                </button>
+                <a href="#diagnostic-tool" class="bg-sky-600 hover:bg-sky-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm shadow-sky-600/20 transition flex items-center">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    Cuba AI Diagnostik
+                </a>
+            </div>
+        </div>
+    </header>
+
+<!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10 sm:space-y-12">
+
+<!-- Hero Section with Realistic Business Image -->
+        <section class="bg-gradient-to-br from-slate-900 via-sky-950 to-blue-900 text-white rounded-3xl p-6 sm:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-sky-500/15 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 space-y-4 md:w-3/5">
+                <span class="inline-flex items-center space-x-1.5 bg-sky-500/20 text-sky-300 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-sky-500/30">
+                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                    <span>Personalised Result-Driven Business Coaching + AI</span>
+                </span>
+                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                    Kertas Kerja Program GROW & Sistem AI Diagnostic
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Inisiatif kejurulatihan perniagaan strategik bersepadu bersama sistem diagnostik pintar percuma untuk memperkasa prestasi dan daya saing PKS ke tahap optimum.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-3 text-xs text-slate-300 font-medium">
+                    <span class="bg-white/10 px-3 py-1 rounded-lg">✨ AI Diagnostic Percuma</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-lg">📊 Bimbingan 3 Bulan</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-lg">🎯 Sesi One-on-One</span>
+                </div>
+            </div>
+            <div class="relative z-10 md:w-2/5 w-full">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-white/15 bg-slate-800 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Sesi Kejurulatihan Perniagaan" class="w-full h-full object-cover transform hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x450/0284c7/ffffff?text=GROW+Coaching'">
+                </div>
+            </div>
+        </section>
+
+<!-- 1. Ringkasan Eksekutif -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">1</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Ringkasan Eksekutif</h2>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Program <strong>GROW (Personalised Result-Driven Business Coaching)</strong> adalah inisiatif bimbingan perniagaan berstruktur yang direka khusus untuk membantu usahawan mengatasi cabaran pengurusan perniagaan yang rumit. Berteraskan sesi bimbingan kelompok selama 3 bulan, pilihan bimbingan peribadi satu-dengan-satu, serta penambahan inovatif <strong>Sistem Business Performance Diagnostic janaan AI percuma</strong>, program ini memfokuskan kepada penyelesaian teras dalam bidang perancangan strategik, pemasaran, jualan, kewangan, dan pengurusan bakat bagi melonjakkan prestasi syarikat ke tahap optimum.
+            </p>
+        </section>
+
+<!-- 2. Pendahuluan & Permasalahan -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">2</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Pendahuluan dan Penyelesaian Masalah</h2>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Perjalanan keusahawanan sering kali digambarkan sebagai satu proses yang sunyi dan penuh dengan cabaran persekitaran yang tidak menentu. Berdasarkan tinjauan dan data industri PKS, majoriti usahawan mikro dan Perusahaan Kecil dan Sederhana (PKS) berdepan dengan kadar kegagalan yang tinggi pada tahun-tahun awal operasi akibat kekurangan bimbingan strategik dan kelemahan mengesan punca masalah secara pantas.
+            </p>
+            <div class="my-4 rounded-xl overflow-hidden border border-slate-200">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Analisis Data Perniagaan" class="w-full h-48 sm:h-64 object-cover" onerror="this.src='https://placehold.co/1000x400/f1f5f9/0284c7?text=Business+Analysis'">
+            </div>
+            <div class="bg-sky-50/70 border-l-4 border-sky-500 p-4 sm:p-5 rounded-r-xl text-slate-700 text-sm leading-relaxed">
+                <strong>Statistik & Kajian Berkaitan:</strong> Lebih 60% PKS gagal menembusi pasaran mampan kerana kelemahan dalam pengurusan aliran tunai, perancangan strategik jangka panjang, serta kelewatan mengesan isu dalaman syarikat. Penggabungan diagnostik pintar AI dan bimbingan mentor berpengalaman menjadi pemangkin utama pemulihan dan pertumbuhan syarikat.
+            </div>
+        </section>
+
+<!-- 3. Penyelesaian Masalah & Elemen AI -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">3</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Penyelesaian Masalah & Integrasi AI</h2>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Program GROW menawarkan pendekatan hibrid yang komprehensif melalui:
+            </p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                    <div class="text-sky-600 font-bold text-sm">🤖 AI Diagnostic</div>
+                    <p class="text-xs text-slate-600">Sistem imbasan kesihatan perniagaan automatik percuma sebelum mula sesi.</p>
+                </li>
+                <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                    <div class="text-sky-600 font-bold text-sm">👥 Sesi Kumpulan</div>
+                    <p class="text-xs text-slate-600">1 hari sesi/bulan selama 3 bulan (eksklusif 10 syarikat setiap sesi).</p>
+                </li>
+                <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+                    <div class="text-sky-600 font-bold text-sm">🎯 1-on-1 Coaching</div>
+                    <p class="text-xs text-slate-600">Sesi peribadi khusus berserta pemantauan berstruktur daripada jurulatih.</p>
+                </li>
+            </ul>
+        </section>
+
+<!-- Interactive AI Diagnostic Tool Section -->
+        <section id="diagnostic-tool" class="bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-6 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-64 h-64 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="space-y-2 relative z-10">
+                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-3.5 py-1.5 rounded-full border border-sky-500/30">
+                    Alat Interaktif Disediakan Percuma
+                </span>
+                <h2 class="text-xl sm:text-2xl font-bold">Sistem Business Performance Diagnostic (Simulasi AI)</h2>
+                <p class="text-slate-300 text-xs sm:text-sm">
+                    Cuba simulasi diagnostik prestasi perniagaan percuma ini untuk melihat bagaimana sistem AI kami mencadangkan fokus modul GROW anda.
+                </p>
+            </div>
+
+<div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 sm:p-6 space-y-4 border border-white/10 relative z-10">
+                <div class="space-y-2">
+                    <label class="block text-xs sm:text-sm font-medium text-sky-200">Pilih Cabaran Utama Perniagaan Anda Semasa Ini:</label>
+                    <select id="business-challenge" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none transition">
+                        <option value="strategic">Kekaburan Hala Tuju & Perancangan Strategik</option>
+                        <option value="marketing">Jualan Rendah & Masalah Pemasaran/Penjenamaan</option>
+                        <option value="financial">Aliran Tunai & Pengurusan Kewangan Terjejas</option>
+                        <option value="talent">Kekurangan Staf Berkualiti & Pengurusan Bakat</option>
+                    </select>
+                </div>
+                <button onclick="runAiDiagnostic()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded-xl text-sm shadow-md shadow-sky-500/20 transition flex items-center justify-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Jalankan Analisis Diagnostik AI
+                </button>
+            </div>
+
+<!-- AI Output Card -->
+            <div id="ai-result-card" class="hidden bg-slate-800/90 border border-sky-500/40 rounded-2xl p-5 sm:p-6 space-y-3 backdrop-blur-sm relative z-10">
+                <div class="flex items-center space-x-2 text-sky-400 text-sm font-semibold">
+                    <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+                    <span id="ai-status-text">Menganalisis data prestasi syarikat...</span>
+                </div>
+                <div id="ai-content-box" class="hidden space-y-2 text-xs sm:text-sm text-slate-300">
+                    <p><strong>Diagnosis AI:</strong> <span id="diag-summary" class="text-white"></span></p>
+                    <p><strong>Modul GROW Disyorkan:</strong> <span id="diag-module" class="text-sky-300 font-semibold"></span></p>
+                    <p class="text-xs text-slate-400 italic pt-1">Laporan diagnostik penuh ini diberikan secara PERCUMA apabila menyertai program GROW.</p>
+                </div>
+            </div>
+        </section>
+
+<!-- 4. Objektif Program -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">4</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Objektif Program</h2>
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                <li class="flex items-start">
+                    <span class="text-sky-600 font-bold mr-2">✓</span>
+                    <span>Melaksanakan penilaian awal prestasi syarikat menggunakan <strong>Sistem Business Performance Diagnostic janaan AI secara percuma</strong>.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-sky-600 font-bold mr-2">✓</span>
+                    <span>Memberikan kefahaman mendalam dalam aspek <strong>Perancangan Strategik, Pemasaran & Penjenamaan, Jualan, Kewangan, serta Pengurusan Bakat</strong>.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-sky-600 font-bold mr-2">✓</span>
+                    <span>Memberikan peluang kepada usahawan mempraktikkan inisiatif baharu yang ditemui sepanjang sesi bimbingan.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-sky-600 font-bold mr-2">✓</span>
+                    <span>Meningkatkan prestasi keseluruhan perniagaan melalui pemantauan kemajuan secara berstruktur oleh jurulatih berpengalaman.</span>
+                </li>
+            </ul>
+        </section>
+
+<!-- 5. Sasaran Peserta & Struktur Modul -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-6 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">5</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Sasaran Peserta & Struktur Modul GROW</h2>
+            </div>
+
+<!-- Sasaran Table -->
+            <div class="overflow-x-auto rounded-xl border border-slate-200">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-900 font-semibold">
+                            <th class="p-3.5 border-b border-slate-200">Kategori Sasaran</th>
+                            <th class="p-3.5 border-b border-slate-200">Penerangan Peranan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600 divide-y divide-slate-100">
+                        <tr>
+                            <td class="p-3.5 font-semibold text-slate-800">Pemilik Perniagaan</td>
+                            <td class="p-3.5">Pemilik tunggal, pemilik bersama (Joint Owner), pengurus, atau pentadbir syarikat.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-semibold text-slate-800">Pentadbir Profesional</td>
+                            <td class="p-3.5">Individu yang memegang portfolio pengurusan operasi dan pentadbiran organisasi korporat.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3.5 font-semibold text-slate-800">Badan & Komuniti Usahawan</td>
+                            <td class="p-3.5">Ahli persatuan perniagaan, komuniti usahawan, pertubuhan bukan kerajaan (NGO), atau badan korporat yang menaungi usahawan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+<!-- 5 Modul Utama GROW (Visualized as per official brochure infographic) -->
+            <div class="space-y-4 pt-2">
+                <h3 class="font-bold text-slate-800 text-sm sm:text-base flex items-center space-x-2">
+                    <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+                    <span>5 Modul Teras GROW Coaching:</span>
+                </h3>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100 space-y-1.5 shadow-xs">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">Strategic Planning & Business Model</span>
+                        </div>
+                        <p class="text-xs text-slate-600 pl-8">Perancangan strategik komprehensif dan penyusunan model perniagaan mampan.</p>
+                    </div>
+
+<div class="bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100 space-y-1.5 shadow-xs">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">Marketing & Branding</span>
+                        </div>
+                        <p class="text-xs text-slate-600 pl-8">Strategi pemasaran moden, penjenamaan efektif, dan penembusan pasaran.</p>
+                    </div>
+
+<div class="bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100 space-y-1.5 shadow-xs">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">Sales Management</span>
+                        </div>
+                        <p class="text-xs text-slate-600 pl-8">Pengurusan jualan terstruktur, teknik penutupan jualan, dan peningkatan hasil.</p>
+                    </div>
+
+<div class="bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100 space-y-1.5 shadow-xs">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">4</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">Financial Management</span>
+                        </div>
+                        <p class="text-xs text-slate-600 pl-8">Pengurusan aliran tunai, kawalan kewangan, dan kestabilan fiskal perniagaan.</p>
+                    </div>
+
+<div class="bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100 space-y-1.5 shadow-xs sm:col-span-2 lg:col-span-1">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-xs">5</span>
+                            <span class="font-bold text-slate-900 text-xs sm:text-sm">Talent Management</span>
+                        </div>
+                        <p class="text-xs text-slate-600 pl-8">Pengurusan sumber manusia, pembangunan bakat, dan produktiviti pasukan.</p>
+                    </div>
+                </div>
+
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 space-y-1">
+                    <strong class="text-slate-900 block font-semibold">Format Pelaksanaan Program:</strong>
+                    <p>• Sesi Kejurulatihan Berkumpulan (3 Bulan): 1 hari sesi/bulan (9.00 pagi - 4.30 petang) eksklusif untuk 10 syarikat setiap sesi.</p>
+                    <p>• Sesi Tambahan / One-on-One Customised: Bimbingan peribadi khusus berfokuskan penyelesaian masalah individu (purata 2 jam setiap sesi).</p>
+                </div>
+            </div>
+        </section>
+
+<!-- 6. Kos Program -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">6</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Kos Program</h2>
+            </div>
+            <ul class="space-y-2.5 text-slate-600 text-sm sm:text-base">
+                <li class="flex items-center space-x-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                    <span><strong>Sistem Business Performance Diagnostic Janaan AI:</strong> Diberikan secara <span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded">PERCUMA</span> kepada peserta berdaftar.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                    <span><strong>Kejurulatihan Berkumpulan (3 Bulan):</strong> Ditetapkan mengikut pakej program.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+                    <span><strong>Kejurulatihan Tambahan (One-on-One / Customised):</strong> RM530 (anggaran purata 2 jam bagi setiap sesi).</span>
+                </li>
+            </ul>
+        </section>
+
+<!-- 7. Kesimpulan & Penutup -->
+        <section class="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-6 sm:p-8 space-y-4 hover:shadow-md transition">
+            <div class="flex items-center space-x-3.5 border-b border-slate-100 pb-4">
+                <div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm shadow-xs">7</div>
+                <h2 class="text-lg sm:text-xl font-bold text-slate-900">Kesimpulan & Penutup</h2>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Program <strong>GROW</strong> dengan integrasi <strong>Sistem Business Performance Diagnostic janaan AI (secara percuma)</strong> merupakan satu pendekatan inovatif yang menggabungkan kepantasan teknologi moden dan sentuhan kejurulatihan peribadi berkesan. Melalui inisiatif ini, usahawan dapat mengenalpasti masalah perniagaan dengan pantas serta dibimbing secara berstruktur untuk memastikan pertumbuhan syarikat yang mampan dan berdaya saing. Kertas kerja ini amat disyorkan untuk diluluskan.
+            </p>
+        </section>
+
+</main>
+
+<!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 mt-16 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p class="font-medium text-slate-300">Program GROW & AI Business Diagnostic</p>
+            <p>© 2026 Hak Cipta Terpelihara. Direka khas untuk prestasi perniagaan berdaya saing.</p>
+        </div>
+    </footer>
+
+<!-- JavaScript Interactivity -->
+    <script>
+        function runAiDiagnostic() {
+            const challenge = document.getElementById('business-challenge').value;
+            const resultCard = document.getElementById('ai-result-card');
+            const statusText = document.getElementById('ai-status-text');
+            const contentBox = document.getElementById('ai-content-box');
+            const diagSummary = document.getElementById('diag-summary');
+            const diagModule = document.getElementById('diag-module');
+
+            resultCard.classList.remove('hidden');
+            statusText.classList.remove('hidden');
+            statusText.textContent = "Sistem AI sedang mengimbas data dan parameter perniagaan...";
+            contentBox.classList.add('hidden');
+
+            setTimeout(() => {
+                statusText.classList.add('hidden');
+                contentBox.classList.remove('hidden');
+
+                if (challenge === 'strategic') {
+                    diagSummary.textContent = "Kesan kelemahan ketara pada hala tuju jangka panjang dan ketidakselarasan model perniagaan.";
+                    diagModule.textContent = "Modul 1: Perancangan Strategik & Model Perniagaan";
+                } else if (challenge === 'marketing') {
+                    diagSummary.textContent = "Kadar penukaran pelanggan rendah dan kelemahan carian pasaran digital serta penjenamaan.";
+                    diagModule.textContent = "Modul 2: Pemasaran & Penjenamaan + Pengurusan Jualan";
+                } else if (challenge === 'financial') {
+                    diagSummary.textContent = "Kadar susut aliran tunai kritikal dan kelemahan kawalan margin keuntungan operasi.";
+                    diagModule.textContent = "Modul 4: Pengurusan Kewangan & Sesi One-on-One Khas";
+                } else {
+                    diagSummary.textContent = "Cabaran pengekalan pekerja mahir dan kelemahan struktur pengurusan sumber manusia.";
+                    diagModule.textContent = "Modul 5: Pengurusan Bakat (Talent Management)";
+                }
+            }, 1200);
+        }
+    </script>
+</body>
+</html>
